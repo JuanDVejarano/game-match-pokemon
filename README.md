@@ -1,7 +1,8 @@
 ## correr programa
 
 - dependencias
-  - tener instalado sass en el sistema operativo
+  - para desarollo tener instalado sass
+  - Tener instalado node
 
 Comandos
 
@@ -16,3 +17,11 @@ npm i
 ```
 npm run sass
 ```
+
+- para ejecutar el proyecto se necesita un servidor en este caso esta instalado en las dependencias asi que con el soguiente comando podra correr el proyecto
+
+```
+npm start
+```
+
+y abrir la carpeta src

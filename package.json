@@ -4,6 +4,7 @@
   "description": "Juego de hacer parejas usando un API de pokemon, con js, sass y html.",
   "main": "index.js",
   "scripts": {
+    "start": "live-server",
     "sass": "sass --watch ./src/sass/style.scss  ./src/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,5 +30,8 @@
   "homepage": "https://github.com/ToyekaXV/game-match-pokemon#readme",
   "dependencies": {
     "sass": "^1.69.4"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
