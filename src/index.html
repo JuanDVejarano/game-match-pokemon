@@ -12,9 +12,12 @@
 
     <header class="header">
         <h1 class="header__title">Match Game Pokemon</h1>
-        <div class="pokeInput">
-            <input type="text">
-        </div>
+        <label class="pokeInput" aria-label="cantidad de parejas" for="">
+            <input id="numPokeCards" type="number" placeholder="" value="9">
+            <button id="btnNewCards" type="button" class="pokeInput__btn">
+                <img src="./assets/img/pokeball.png" alt="">
+            </button>
+        </label>
     </header>
 
     <main class="panelGame">

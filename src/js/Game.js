@@ -3,12 +3,8 @@ class Game {
   arrayObjPkemon = [];
   descubiertas = 0;
 
-  createGame() {
-    // barajar Arreglo
-    this.arrayObjPkemon.sort(function () {
-      return Math.random() - 0.5;
-    });
-
+  createTable() {
+    this.barajarArray();
     //Pintar arreglo
     for (let i = 0; i < this.numCards; i++) {
       let html = `<div class='cardBack'> <img class='cardBack__img' src='./assets/img/tcg-card-back.jpg' alt=''> </div> <div class='cardFront'> <img class='cardFront__img' src='${this.arrayObjPkemon[i].sprites.front_default}' alt=''><p class='cardFront__namePokemon'>${this.arrayObjPkemon[i].pokemon.name}</p></div>`;
@@ -17,6 +13,13 @@ class Game {
       myItem.innerHTML = html;
       document.getElementById("panelGame").appendChild(myItem);
     }
+  }
+
+  // barajar Arreglo
+  barajarArray() {
+    this.arrayObjPkemon.sort(function () {
+      return Math.random() - 0.5;
+    });
   }
 
   clickCard = (element) => {

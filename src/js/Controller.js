@@ -7,6 +7,7 @@ let insConexion = new Conexion();
 let insGame = new Game();
 
 const main = async (paramNumOfpairs) => {
+  insGame.arrayObjPkemon = [];
   insGame.numCards = paramNumOfpairs * 2;
   for (let i = 0; i < paramNumOfpairs; i++) {
     let numRandom = Math.floor(Math.random() * 1000);
@@ -14,7 +15,7 @@ const main = async (paramNumOfpairs) => {
     insGame.arrayObjPkemon.push(objPokemon);
     insGame.arrayObjPkemon.push(objPokemon);
   }
-  insGame.createGame();
+  insGame.createTable();
   crearalistener();
 };
 
@@ -31,4 +32,10 @@ function crearalistener() {
   }
 }
 
+const newMain = () => {
+  let numCards = document.getElementById("numPokeCards").value;
+  main(numCards);
+};
+
+document.getElementById("btnNewCards").addEventListener("click", newMain);
 main(numOfpairs);
