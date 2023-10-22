@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "fontGame";
+  src: url(../assets/font/PressStart2P-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -5,15 +11,57 @@
 }
 
 body {
-  background-image: url("../assets/backGround.jpg");
+  background-image: url("../assets/img/backGround.jpg");
   background-size: 100%;
+  padding: 20px;
+}
+
+.header {
+  padding: 20px 0px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__title {
+  font-family: "fontGame";
+  font-weight: normal;
+  margin: auto;
+  color: #838587;
+  font-size: 32px;
 }
 
 .card {
-  width: 100px;
-  height: 200px;
-  background-color: red;
+  width: 117px;
+  height: 163px;
+  background-color: #3c4160;
   cursor: pointer;
+  transition: transform 1s ease;
+}
+.card .cardBack__img {
+  width: 100%;
+  height: 100%;
+}
+.card__girar {
+  transform: rotateY(180deg);
+}
+.card .cardFront {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card .cardFront__img {
+  width: 100%;
+}
+.card .cardFront__namePokemon {
+  font-family: "fontGame";
+  font-size: 10px;
+  color: #ffffde;
+}
+
+.none {
+  display: none !important;
 }
 
 .panelGame {
@@ -21,8 +69,10 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 20px 50px;
   gap: 20px;
+  max-width: 910px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

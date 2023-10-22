@@ -1,3 +1,6 @@
-class Game {}
+class Game {
+  numCards;
+  arrayObjPkemon;
+}
 
 export default Game;
