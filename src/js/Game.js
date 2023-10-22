@@ -60,6 +60,9 @@ class Game {
           for (let j = 0; j < allCards.length; j++) {
             allCards[j].style.pointerEvents = "initial";
           }
+          if (this.successes == this.numCards / 2) {
+            this.winner();
+          }
         }, 1000);
         let allCards = document.querySelectorAll(".card");
         for (let j = 0; j < allCards.length; j++) {
@@ -72,6 +75,11 @@ class Game {
   fnSuccesses() {
     let p = document.getElementById("numAnswers");
     p.innerHTML = this.successes;
+  }
+
+  winner() {
+    let modal = document.getElementById("modalWinner");
+    modal.classList.toggle("modal--show");
   }
 }
 
