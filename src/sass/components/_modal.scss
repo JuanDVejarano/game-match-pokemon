@@ -1,0 +1,51 @@
+.modal {
+    position: fixed;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 0vh;
+    background-color: rgba(229, 218, 154, 0.7);
+    transition: all 1s ease;
+
+    &__img {
+        height: 0%;
+    }
+
+    &__btn {
+        width: auto;
+        border-radius: 20px;
+        padding: 0;
+        background-color: red;
+        font-family: "fontGame";
+        font-size: 0;
+        height: 0;
+        color: #ffffff;
+        cursor: pointer;
+        border: solid 0px #ffffff;
+    }
+
+    &--show {
+        @extend .modal;
+        height: 100vh;
+
+        .modal {
+            &__img {
+                height: 50%;
+            }
+
+            &__btn {
+                padding: 15px 20px;
+                border: 3px;
+                height: auto;
+                font-size: 13px;
+            }
+        }
+    }
+}

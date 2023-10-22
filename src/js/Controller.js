@@ -37,5 +37,11 @@ const newMain = () => {
   main(numCards);
 };
 
+const reload = () => {
+  newMain();
+  insGame.winner();
+};
+
 document.getElementById("btnNewCards").addEventListener("click", newMain);
+document.getElementById("btnReload").addEventListener("click", reload);
 main(numOfpairs);
