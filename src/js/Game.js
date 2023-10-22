@@ -2,6 +2,7 @@ class Game {
   numCards;
   arrayObjPkemon = [];
   descubiertas = 0;
+  successes = 0;
 
   createTable() {
     this.deleteTable();
@@ -24,6 +25,8 @@ class Game {
   }
 
   deleteTable() {
+    this.successes = 0;
+    this.fnSuccesses();
     const element = document.getElementById("panelGame");
     while (element.firstChild) {
       element.removeChild(element.firstChild);
@@ -43,6 +46,8 @@ class Game {
             activeCards[0].lastChild.lastChild.textContent
           ) {
             this.descubiertas = 0;
+            this.successes = this.successes + 1;
+            this.fnSuccesses();
           } else {
             this.descubiertas = 0;
             activeCards[1].classList.remove("card__girar");
@@ -63,6 +68,11 @@ class Game {
       }
     }
   };
+
+  fnSuccesses() {
+    let p = document.getElementById("numAnswers");
+    p.innerHTML = this.successes;
+  }
 }
 
 export default Game;

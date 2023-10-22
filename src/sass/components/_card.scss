@@ -7,6 +7,10 @@
     transition: transform 1s ease;
     list-style: none;
 
+    &:hover {
+        transform: scale(1.06);
+    }
+
     .cardBack {
         width: 100%;
         height: 100%;
