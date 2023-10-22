@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "fontGame";
+  src: url(../assets/font/PressStart2P-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/img/backGround.jpg");
+  background-size: 100%;
+  padding: 20px;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+  font-family: Arial;
+}
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0;
+}
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+/* Button Controls
+-----------------------------------------------*/
+input[type=checkbox],
+input[type=radio] {
+  width: 13px;
+  height: 13px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type=reset],
+input[type=button],
+input[type=submit] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top;
+}
+
+.header {
+  padding: 20px 0px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.header__title {
+  font-family: "fontGame";
+  font-weight: normal;
+  color: #838587;
+  font-size: 32px;
+}
+
+.pokeInput, .pokeInput input {
+  position: relative;
+  width: 90px;
+  border-radius: 20px;
+  background-color: aliceblue;
+  display: flex;
+}
+.pokeInput input {
+  box-sizing: border-box;
+  padding: 9px;
+  padding-left: 43px;
+  font-family: "fontGame";
+  font-size: 12px;
+}
+.pokeInput__btn {
+  position: absolute;
+  left: -1px;
+  top: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.pokeInput__btn:hover {
+  transform: rotateZ(180deg);
+}
+.pokeInput__btn img {
+  width: 35px;
+}
+
+.article {
+  margin-bottom: 10px;
+  padding-left: 50px;
+}
+.article__text {
+  font-family: "fontGame";
+  color: #ffffff;
+}
+
+.card {
+  position: relative;
+  width: 130px;
+  height: 185px;
+  cursor: pointer;
+  transition: transform 1s ease;
+  list-style: none;
+}
+.card:hover {
+  transform: scale(1.06);
+}
+.card .cardBack {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  position: absolute;
+  transition: display 1s ease;
+}
+.card .cardBack__img {
+  width: 100%;
+  height: 100%;
+}
+.card .cardFront {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  background-color: #6b3200;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(90deg);
+}
+.card .cardFront__img {
+  width: 100%;
+}
+.card .cardFront__namePokemon {
+  font-family: "fontGame";
+  font-size: 10px;
+  color: #ffffde;
+}
+.card__girar .cardBack {
+  transform: rotateY(90deg);
+}
+.card__girar .cardFront {
+  transform: rotateY(0deg);
+}
+
+.main {
+  max-width: 1100px;
+  padding: 20px 50px;
+  margin: auto;
+}
+
+.panelGame {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: auto;
+}
+
+.modal, .modal--show {
+  position: fixed;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 0vh;
+  background-color: rgba(229, 218, 154, 0.7);
+  transition: all 1s ease;
+}
+.modal__img {
+  height: 0%;
+}
+.modal__btn {
+  width: auto;
+  border-radius: 20px;
+  padding: 0;
+  background-color: red;
+  font-family: "fontGame";
+  font-size: 0;
+  height: 0;
+  color: #ffffff;
+  cursor: pointer;
+  border: solid 0px #ffffff;
+}
+.modal--show {
+  height: 100vh;
+}
+.modal--show .modal__img {
+  height: 50%;
+}
+.modal--show .modal__btn {
+  padding: 15px 20px;
+  border: 3px;
+  height: auto;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */

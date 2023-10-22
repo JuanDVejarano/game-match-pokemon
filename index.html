@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Match Pokemon</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Match Game Pokemon</h1>
+        <label class="pokeInput" aria-label="cantidad de parejas" for="">
+            <input id="numPokeCards" type="number" placeholder="" value="9">
+            <button aria-label="boton reset tablero o nuevas parejas" id="btnNewCards" type="button"
+                class="pokeInput__btn">
+                <img src="./assets/img/pokeball.png" alt="">
+            </button>
+        </label>
+    </header>
+
+    <main class="main">
+        <article class="article">
+            <P class="article__text">Has capturado <span id="numAnswers">0</span> Pokemon</P>
+        </article>
+        <ul id="panelGame" class="panelGame">
+        </ul>
+    </main>
+
+    <div id="modalWinner" class="modal">
+        <img class="modal__img" src="./assets/img/winner.png" alt="">
+        <button id="btnReload" class="modal__btn">Jugar de nuevo</button>
+    </div>
+
+</body>
+
+<script type="module" src="./js/Controller.js"></script>
+
+</html>

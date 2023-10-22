@@ -1,0 +1,16 @@
+.header {
+    padding: 20px 0px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &__title {
+        font-family: 'fontGame';
+        font-weight: normal;
+        //margin: auto;
+        color: #838587;
+        font-size: 32px;
+    }
+}
