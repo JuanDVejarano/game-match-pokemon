@@ -14,13 +14,17 @@
         <h1 class="header__title">Match Game Pokemon</h1>
         <label class="pokeInput" aria-label="cantidad de parejas" for="">
             <input id="numPokeCards" type="number" placeholder="" value="9">
-            <button id="btnNewCards" type="button" class="pokeInput__btn">
+            <button aria-label="boton reset tablero o nuevas parejas" id="btnNewCards" type="button"
+                class="pokeInput__btn">
                 <img src="./assets/img/pokeball.png" alt="">
             </button>
         </label>
     </header>
 
-    <main class="panelGame">
+    <main class="main">
+        <article class="article">
+            <P class="article__text">Has capturado <span id="numAnswers">0</span> Pokemon</P>
+        </article>
         <ul id="panelGame" class="panelGame">
         </ul>
     </main>

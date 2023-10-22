@@ -5,6 +5,7 @@
     //background-color: #3c4160;
     cursor: pointer;
     transition: transform 1s ease;
+    list-style: none;
 
     .cardBack {
         width: 100%;
@@ -23,7 +24,8 @@
         width: 100%;
         height: 100%;
         transition: transform 1s ease;
-        background-color: #3c4160;
+        //background-color: #3c4160;
+        background-color: #6b3200;
         position: absolute;
         display: flex;
         flex-direction: column;
