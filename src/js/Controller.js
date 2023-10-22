@@ -6,10 +6,9 @@ let numOfpairs = 9;
 let insConexion = new Conexion();
 let insGame = new Game();
 
-insGame.numCards = numOfpairs * 2;
-
-const main = async () => {
-  for (let i = 0; i < numOfpairs; i++) {
+const main = async (paramNumOfpairs) => {
+  insGame.numCards = paramNumOfpairs * 2;
+  for (let i = 0; i < paramNumOfpairs; i++) {
     let numRandom = Math.floor(Math.random() * 1000);
     let objPokemon = await insConexion.getData(`pokemon-form/${numRandom}`);
     insGame.arrayObjPkemon.push(objPokemon);
@@ -32,4 +31,4 @@ function crearalistener() {
   }
 }
 
-main();
+main(numOfpairs);
