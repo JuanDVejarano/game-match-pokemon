@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/base/_resets.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EAEA","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/base/_resets.scss","../sass/components/_card.scss","../sass/components/_panelGame.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;AAGJ;EACI;EAEA;;;ACTJ;EACI;EACA;EACA;EACA;;;ACJJ;EACI;EACA;EACA;EACA;EACA;EACA","file":"style.css"}

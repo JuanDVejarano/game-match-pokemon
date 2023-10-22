@@ -5,10 +5,24 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-image: url("../assets/backGround.jpg");
   background-size: 100%;
+}
+
+.card {
+  width: 100px;
+  height: 200px;
+  background-color: red;
+  cursor: pointer;
+}
+
+.panelGame {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
