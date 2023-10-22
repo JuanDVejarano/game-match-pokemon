@@ -1,22 +1,21 @@
 import Conexion from "./Conexion.js";
 import Game from "./Game.js";
 
-let numOfpairs = 5;
+let numOfpairs = 8;
 
 let insConexion = new Conexion();
+let insGame = new Game();
 
-insConexion.numCards = numOfpairs * 2;
+insGame.numCards = numOfpairs * 2;
 
 const consulta = async () => {
-  let numRandom = Math.floor(Math.random() * 1000);
-  for (let i = 0; i < insConexion.numCards; i++) {
-    let objPokemon = await insConexion.getData(`pokemon/${numRandom}`);
-    console.log(objPokemon);
+  for (let i = 0; i < numOfpairs; i++) {
+    let numRandom = Math.floor(Math.random() * 1000);
+    let objPokemon = await insConexion.getData(`pokemon-form/${numRandom}`);
+    insGame.arrayObjPkemon.push(objPokemon);
+    insGame.arrayObjPkemon.push(objPokemon);
   }
+  await insGame.createGame();
 };
 
-console.log(Math.floor(Math.random() * 1000));
-
 consulta();
-
-//let objPokemon = insConexion.getData("pokemon/");
