@@ -4,6 +4,7 @@ class Game {
   descubiertas = 0;
 
   createTable() {
+    this.deleteTable();
     this.barajarArray();
     //Pintar arreglo
     for (let i = 0; i < this.numCards; i++) {
@@ -20,6 +21,13 @@ class Game {
     this.arrayObjPkemon.sort(function () {
       return Math.random() - 0.5;
     });
+  }
+
+  deleteTable() {
+    const element = document.getElementById("panelGame");
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
   }
 
   clickCard = (element) => {
