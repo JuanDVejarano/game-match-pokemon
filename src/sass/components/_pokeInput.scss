@@ -1,0 +1,35 @@
+.pokeInput {
+    position: relative;
+    width: 90px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    display: flex;
+
+    input {
+        @extend .pokeInput;
+        box-sizing: border-box;
+        padding: 9px;
+        padding-left: 43px;
+        font-family: "fontGame";
+        font-size: 12px;
+    }
+
+    &__btn {
+        position: absolute;
+        left: -1px;
+        top: -2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            transform: rotateZ(180deg);
+        }
+
+        img {
+            width: 35px;
+        }
+    }
+}
