@@ -176,6 +176,38 @@ select[multiple] {
   color: #ffffff;
 }
 
+.loader {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(163, 161, 178, 0.7);
+  transform-origin: center;
+}
+.loader__img {
+  transform: rotate(45deg);
+  width: 80px;
+  height: 80px;
+  animation: rotar 5s linear infinite;
+}
+.loader--show {
+  display: flex;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .card {
   position: relative;
   width: 130px;
