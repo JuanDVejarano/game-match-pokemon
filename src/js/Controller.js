@@ -5,6 +5,7 @@ let numOfpairs = 9;
 
 let insConexion = new Conexion();
 let insGame = new Game();
+let loader = document.getElementById("idLoader");
 
 const main = async (paramNumOfpairs) => {
   insGame.arrayObjPkemon = [];
@@ -30,9 +31,11 @@ function crearalistener() {
       false
     );
   }
+  loader.classList.remove("loader--show");
 }
 
 const newMain = () => {
+  loader.classList.add("loader--show");
   let numCards = document.getElementById("numPokeCards").value;
   main(numCards);
 };
